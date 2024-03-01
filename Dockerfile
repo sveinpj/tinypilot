@@ -1,5 +1,4 @@
 FROM python:3
-
 RUN apt-get update && apt-get install -y ca-certificates curl gnupg
 RUN curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
 #RUN NODE_MAJOR=20
