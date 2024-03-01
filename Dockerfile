@@ -5,6 +5,7 @@ RUN curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | gpg -
 #RUN NODE_MAJOR=20
 RUN echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_20.x nodistro main" | tee /etc/apt/sources.list.d/nodesource.list
 RUN apt-get update && apt-get install nodejs -y
+RUN apt-get install shellcheck -y
 
 #RUN curl -sL https://deb.nodesource.com/setup_14.x |  bash -
 #RUN  apt-get install -y nodejs
