@@ -1,0 +1,1 @@
+docker buildx build --platform=linux/arm64 --no-cache -t {hub}/tinypilot:1.9.2 --push .
