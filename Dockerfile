@@ -6,9 +6,9 @@ ARG NODE_MAJOR=20
 RUN echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | tee /etc/apt/sources.list.d/nodesource.list
 RUN apt-get update && apt-get install nodejs -y
 RUN apt-get install shellcheck -y
-
+WORKDIR /home
 RUN git clone https://github.com/sveinpj/tinypilot
-WORKDIR /tinypilot
+WORKDIR /home/tinypilot
 RUN pip install -r requirements.txt
 RUN pip install -r dev_requirements.txt
 RUN npm install prettier
@@ -17,4 +17,4 @@ RUN npm install prettier
 EXPOSE 8000
 ENV PORT=8000
 
-CMD ["python", "/tinypilot/app/main.py"]
+CMD ["python", "/home/tinypilot/app/main.py"]
