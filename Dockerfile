@@ -20,7 +20,7 @@ WORKDIR /tinypilot
 RUN pip install -r requirements.txt
 RUN pip install -r dev_requirements.txt
 RUN npm install prettier
-RUN ./dev-scripts/build
+# RUN ./dev-scripts/build
 
 EXPOSE 8000
 ENV PORT=8000
