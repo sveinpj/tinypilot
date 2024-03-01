@@ -8,7 +8,6 @@ RUN apt-get update && apt-get install nodejs -y
 RUN apt-get install shellcheck -y
 
 #RUN curl -sL https://deb.nodesource.com/setup_14.x |  bash -
-#RUN  apt-get install -y nodejs
 
 RUN git clone https://github.com/sveinpj/tinypilot
 #COPY requirements.txt /tinypilot
